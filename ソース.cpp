@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdint.h>
 
 struct NoMean {
 	const size_t N = 1;
@@ -37,4 +38,19 @@ bool Free(Propearty& In) {
 struct HandleNamere {
 	NoMean Name;
 	Propearty Prop;
+};
+
+struct Memory {
+	//type W = void*;
+	typedef uint8_t W;
+	//type Word = W;
+	W Enpty;
+};
+
+struct PassPort {
+	HandleNamere Name;
+	HandleNamere From;
+	HandleNamere To;
+	Memory Info;
+	Memory Mem;
 };
